@@ -1,6 +1,6 @@
 {
   "name": "sh-icons",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "SVG icons for SuperHeroUI components",
   "main": "index.js",
   "scripts": {
