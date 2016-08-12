@@ -1,0 +1,30 @@
+{
+  "name": "sh-icons",
+  "version": "0.1.4",
+  "description": "SVG icons for SuperHeroUI components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node-sass --output-style compressed src/main.scss bin/main.css & node-sass --output-style compressed -w src/main.scss bin/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperheroUI/shIcons.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "icons",
+    "insidesales.com"
+  ],
+  "author": "Kevin <kevinbatchelor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SuperheroUI/shIcons/issues"
+  },
+  "homepage": "https://github.com/SuperheroUI/shIcons#readme",
+  "devDependencies": {
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.10.0"
+  }
+}
