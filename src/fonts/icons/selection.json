@@ -161,7 +161,7 @@
         "width": 1015,
         "grid": 16,
         "tags": [
-          "envlope"
+          "envelope"
         ],
         "colorPermutations": {
           "14751581": [],
@@ -180,7 +180,7 @@
         "id": 9,
         "prevSize": 32,
         "code": 59653,
-        "name": "envlope"
+        "name": "envelope"
       },
       "setIdx": 0,
       "setId": 0,
