@@ -1,0 +1,139 @@
+@import '../node_modules/sh-core/src/base';
+
+@mixin circle-states {
+    &.active {
+        color: rgba($color-font, .9);
+
+        &:before {
+            background: $color-primary;
+        }
+    }
+
+    &.dark {
+        border-color:rgba($color-box-background, .4) ;
+        &:before {
+            margin: 0;
+            background: $color-box-dark-background4;
+        }
+    }
+
+    &.selected {
+        border: 2px solid rgba($color-primary, .8);
+
+        &:before {
+            margin: 0;
+            background: rgba($color-primary, .2);
+        }
+    }
+}
+
+.circle {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    width: 66px;
+    height: 66px;
+    border-radius: 300px;
+    font-size: 35px;
+    color: $color-font;
+    line-height: 53px;
+    padding: 6px;
+    border: 3px solid $color-box-background;
+    text-align: center;
+    vertical-align: middle;
+    transition: background $transition-fast, border $transition-fast;
+
+    @include circle-states;
+
+    i {
+        position: relative;
+    }
+
+    &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($color-box-background, .2);
+        border-radius: 300px;
+        margin: 1px;
+
+        transition: margin $transition-fast, background $transition-fast;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: rgba($color-box-background, .4);
+        border-color: rgba($color-box-background, .4);
+    }
+
+    &.power:after {
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        content: '\e916';
+        position: absolute;
+        top: -15%;
+        right: -13%;
+        font-size: 80%;
+    }
+
+    &.sm {
+        height: 31px;
+        width: 31px;
+        padding: 5px;
+        font-size: 16px;
+        line-height: 18px;
+        border: 2px solid rgba($color-box-background, .4);
+
+        i {
+            padding-top: 3px;
+            top: 2px;
+            left: 5px;
+            position: absolute;
+        }
+
+        &:before {
+            background: none;
+        }
+
+        @include circle-states;
+    }
+}
+
+.dot {
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    background: rgba($color-box-background, .2);
+    border-radius: 300px;
+    margin: 0 2px;
+    vertical-align: middle;
+}
+
+.circle-simple {
+    @extend .circle;
+
+    border: none;
+    i {
+        line-height: 1.5;
+    }
+
+    &.sm {
+        border: 2px solid rgba($color-box-background, .4);
+        i {
+            line-height: 1;
+        }
+    }
+}
+
