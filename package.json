@@ -1,11 +1,13 @@
 {
   "name": "sh-icons",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "SVG icons for SuperHeroUI components",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node-sass --output-style compressed src/main.scss bin/main.css & node-sass --output-style compressed -w src/main.scss bin/main.css"
+    "clean": "rm -r ./bin",
+    "test": "echo \"No test on SCSS files.\" && exit 0",
+    "build": "./node_modules/.bin/node-sass --output-style compressed src/main.scss bin/main.css",
+    "dev": "./node_modules/.bin/node-sass --output-style compressed src/main.scss bin/main.css & ./node_modules/.bin/node-sass --output-style compressed -w src/main.scss bin/main.css"
   },
   "repository": {
     "type": "git",

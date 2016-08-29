@@ -2,92 +2,269 @@
     font-family: 'superhero';
     src: url('../src/fonts/icons/superhero.eot');
     src: url('../src/fonts/icons/superhero.eot') format('embedded-opentype'),
-    url('../src/fonts/icons/superhero.ttf') format('truetype'),
-    url('../src/fonts/icons/superhero.woff') format('woff'),
-    url('../src/fonts/icons/superhero.svg') format('svg');
+        url('../src/fonts/icons/superhero.ttf') format('truetype'),
+        url('../src/fonts/icons/superhero.woff') format('woff'),
+        url('../src/fonts/icons/superhero.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-$icons: (
-        record: "\e901",
-        text-bubble: "\e902",
-        people-three: "\e903",
-        dial-pad: "\e904",
-        envelope: "\e905",
-        end-call: "\e906",
-        right-arrow: "\e907",
-        linkedin: "\e908",
-        neuralytics: "\e900",
-        phone: "\e909",
-        clock: "\e90a",
-        phone-volume: "\e90b",
-        calendar: "\e910",
-        radio-button: "\e911",
-        radio-button-empty: "\e912",
-        check-box-empty: "\e913",
-        text-bubbles: "\e917",
-        check-box: "\e918",
-        check: "\e919",
-        buildings: "\e91a",
-        download: "\e914",
-        check-outline: "\e915",
-        bolt: "\e916",
-        chevron-up: "\e90c",
-        chevron-down: "\e90d",
-        chevron-left: "\e90e",
-        chevron-right: "\e90f",
-        insidesales-logo: "\e91b",
-        paperclip: "\e91c",
-        x: "\e91d",
-        cursor: "\e91e",
-        font: "\e91f",
-        gear: "\e920",
-        phone-arrow: "\e921",
-        info: "\e922",
-        face-neutral: "\e923",
-        medal: "\e924",
-        minus: "\e925",
-        icosahedron: "\e926",
-        face-sad: "\e927",
-        plus: "\e928",
-        search: "\e929",
-        face-happy: "\e92a",
-        trophy: "\e92b",
-        vision: "\e92c",
-        hourglass: "\e92d",
-        flag: "\e92e",
-        ban: "\e92f",
-        flow-chart: "\e930",
-        heart: "\e931",
-        people: "\e932",
-        glove: "\e933",
-        twitter: "\e934",
-        play: "\e935",
-        expand: "\e936",
-        collapse: "\e937",
-        facebook: "\e938",
-        facebook-negative: "\e939",
-        laurels: "\e93a",
-        trash: "\e93b",
-        person: "\e93c"
-);
+.sh-icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'superhero' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-@each $label, $char in ($icons) {
-    .icon-#{$label} {
-        font-family: 'superhero' !important;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-
-        /* Better Font Rendering =========== */
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-
-        &:before {
-            content: $char;
-        }
-    }
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+.icon-record:before {
+    content: "\e901";
+}
+
+.icon-text-bubble:before {
+    content: "\e902";
+}
+
+.icon-people-three:before {
+    content: "\e903";
+}
+
+.icon-dial-pad:before {
+    content: "\e904";
+}
+
+.icon-envelope:before {
+    content: "\e905";
+}
+
+.icon-end-call:before {
+    content: "\e906";
+}
+
+.icon-right-arrow:before {
+    content: "\e907";
+}
+
+.icon-linkedin:before {
+    content: "\e908";
+}
+
+.icon-neuralytics:before {
+    content: "\e900";
+}
+
+.icon-phone:before {
+    content: "\e909";
+}
+
+.icon-clock:before {
+    content: "\e90a";
+}
+
+.icon-phone-volume:before {
+    content: "\e90b";
+}
+
+.icon-calendar:before {
+    content: "\e910";
+}
+
+.icon-radio-button:before {
+    content: "\e911";
+}
+
+.icon-radio-button-empty:before {
+    content: "\e912";
+}
+
+.icon-check-box-empty:before {
+    content: "\e913";
+}
+
+.icon-text-bubbles:before {
+    content: "\e917";
+}
+
+.icon-check-box:before {
+    content: "\e918";
+}
+
+.icon-check:before {
+    content: "\e919";
+}
+
+.icon-buildings:before {
+    content: "\e91a";
+}
+
+.icon-download:before {
+    content: "\e914";
+}
+
+.icon-check-outline:before {
+    content: "\e915";
+}
+
+.icon-bolt:before {
+    content: "\e916";
+}
+
+.icon-chevron-up:before {
+    content: "\e90c";
+}
+
+.icon-chevron-down:before {
+    content: "\e90d";
+}
+
+.icon-chevron-left:before {
+    content: "\e90e";
+}
+
+.icon-chevron-right:before {
+    content: "\e90f";
+}
+
+.icon-insidesales-logo:before {
+    content: "\e91b";
+}
+
+.icon-paperclip:before {
+    content: "\e91c";
+}
+
+.icon-x:before {
+    content: "\e91d";
+}
+
+.icon-cursor:before {
+    content: "\e91e";
+}
+
+.icon-font:before {
+    content: "\e91f";
+}
+
+.icon-gear:before {
+    content: "\e920";
+}
+
+.icon-phone-arrow:before {
+    content: "\e921";
+}
+
+.icon-info:before {
+    content: "\e922";
+}
+
+.icon-face-neutral:before {
+    content: "\e923";
+}
+
+.icon-medal:before {
+    content: "\e924";
+}
+
+.icon-minus:before {
+    content: "\e925";
+}
+
+.icon-icosahedron:before {
+    content: "\e926";
+}
+
+.icon-face-sad:before {
+    content: "\e927";
+}
+
+.icon-plus:before {
+    content: "\e928";
+}
+
+.icon-search:before {
+    content: "\e929";
+}
+
+.icon-face-happy:before {
+    content: "\e92a";
+}
+
+.icon-trophy:before {
+    content: "\e92b";
+}
+
+.icon-vision:before {
+    content: "\e92c";
+}
+
+.icon-hourglass:before {
+    content: "\e92d";
+}
+
+.icon-flag:before {
+    content: "\e92e";
+}
+
+.icon-ban:before {
+    content: "\e92f";
+}
+
+.icon-flow-chart:before {
+    content: "\e930";
+}
+
+.icon-heart:before {
+    content: "\e931";
+}
+
+.icon-people:before {
+    content: "\e932";
+}
+
+.icon-glove:before {
+    content: "\e933";
+}
+
+.icon-twitter:before {
+    content: "\e934";
+}
+
+.icon-play:before {
+    content: "\e935";
+}
+
+.icon-expand:before {
+    content: "\e936";
+}
+
+.icon-collapse:before {
+    content: "\e937";
+}
+
+.icon-facebook:before {
+    content: "\e938";
+}
+
+.icon-facebook-negative:before {
+    content: "\e939";
+}
+
+.icon-laurels:before {
+    content: "\e93a";
+}
+
+.icon-trash:before {
+    content: "\e93b";
+}
+
+.icon-person:before {
+    content: "\e93c";
+}
+
