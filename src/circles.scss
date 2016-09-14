@@ -2,7 +2,22 @@
 
 @mixin circle-states {
     &.active {
-        color: rgba($color-font, .9);
+        color: $color-primary;
+        border-color: $color-primary;
+
+        &:before {
+            background: rgba($color-primary, .2);
+        }
+    }
+
+    &.active.circle-simple {
+        color: $color-box-background;
+
+        &.sm {
+            &:before {
+                background: rgba($color-primary, .4);
+            }
+        }
 
         &:before {
             background: $color-primary;
@@ -25,6 +40,10 @@
             background: rgba($color-primary, .2);
         }
     }
+
+    &.past {
+        color: $color-box-background3;
+    }
 }
 
 .circle {
@@ -38,10 +57,10 @@
     height: 66px;
     border-radius: 300px;
     font-size: 35px;
-    color: $color-font;
+    color: $color-box-background1;
     line-height: 53px;
     padding: 6px;
-    border: 3px solid $color-box-background;
+    border: 3px solid $color-box-background1;
     text-align: center;
     vertical-align: middle;
     transition: background $transition-fast, border $transition-fast;
@@ -62,15 +81,15 @@
         bottom: 0;
         background: rgba($color-box-background, .2);
         border-radius: 300px;
-        margin: 1px;
+        margin: 2px;
 
         transition: margin $transition-fast, background $transition-fast;
     }
 
     &.disabled,
     &:disabled {
-        color: rgba($color-box-background, .4);
-        border-color: rgba($color-box-background, .4);
+        color: $color-box-background3;
+        border-color: $color-box-background3;
     }
 
     &.power:after {
@@ -94,7 +113,7 @@
         padding: 5px;
         font-size: 16px;
         line-height: 18px;
-        border: 2px solid rgba($color-box-background, .4);
+        border: 2px solid $color-box-background3;
 
         i {
             padding-top: 3px;
@@ -105,6 +124,7 @@
 
         &:before {
             background: none;
+            margin: 0;
         }
 
         @include circle-states;
@@ -115,7 +135,7 @@
     display: inline-block;
     height: 6px;
     width: 6px;
-    background: rgba($color-box-background, .2);
+    background: $color-box-background4;
     border-radius: 300px;
     margin: 0 2px;
     vertical-align: middle;
@@ -130,7 +150,7 @@
     }
 
     &.sm {
-        border: 2px solid rgba($color-box-background, .4);
+        border: 2px solid $color-box-background3;
         i {
             line-height: 1;
         }
